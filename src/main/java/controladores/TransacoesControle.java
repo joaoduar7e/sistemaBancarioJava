@@ -118,6 +118,7 @@ public class TransacoesControle implements Serializable {
                 } else if (c != null) {
                     contaFacade.contaMerge(c);
                     transacoesFacade.salvar(transacoes);
+                    JsfUtil.adicionarMenssagemSucesso("Salvo com sucesso");
                     FacesContext.getCurrentInstance().getExternalContext().redirect("list.xhtml");
                 }
             }

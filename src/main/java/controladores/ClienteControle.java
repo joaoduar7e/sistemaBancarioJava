@@ -56,6 +56,7 @@ public class ClienteControle implements Serializable {
             } else {
                 clienteFacade.salvar(cliente);
                 cliente = new Cliente();
+                JsfUtil.adicionarMenssagemSucesso("Salvo com sucesso");
                 FacesContext.getCurrentInstance().getExternalContext().redirect("list.xhtml");
             }
         } catch (Exception e) {

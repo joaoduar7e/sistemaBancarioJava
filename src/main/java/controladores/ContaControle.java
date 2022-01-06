@@ -69,7 +69,7 @@ public class ContaControle implements Serializable {
 
     public void salvar() throws IOException {
         try {
-            if (conta.getConta().length() != 7) {
+             if (conta.getConta().length() != 7) {
                 JsfUtil.adicionarMenssagemErro("O número da conta deve conter '6' caracteres!");
                 return;
             } else if (conta.getCliente().getPossuiConta()) {
@@ -78,6 +78,7 @@ public class ContaControle implements Serializable {
                 conta.getCliente().setPossuiConta(true);
                 contaFacade.salvar(conta);
                 conta = new Conta();
+                JsfUtil.adicionarMenssagemSucesso("Salvo com sucesso");
                 FacesContext.getCurrentInstance().getExternalContext().redirect("list.xhtml");
             }
         } catch (Exception e) {
