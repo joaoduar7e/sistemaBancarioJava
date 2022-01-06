@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>586135d8-5c52-43a3-bba5-3a7409756137</OriginalElement>
+  <nodes>
+    <node x="752.3893678160921" y="1423.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensservico</node>
+    <node x="1324.3053160919542" y="685.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.funcionario</node>
+    <node x="209.0" y="1611.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.pais</node>
+    <node x="151.2643678160921" y="740.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.agendamento</node>
+    <node x="1366.951867816092" y="1164.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itenscompra</node>
+    <node x="0.0" y="375.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.locais</node>
+    <node x="1127.6041666666667" y="806.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.pecas</node>
+    <node x="603.8268678160921" y="397.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.planopagamento</node>
+    <node x="478.5272988505747" y="1423.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.baixacontasreceber</node>
+    <node x="926.4518678160921" y="1164.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensvenda</node>
+    <node x="1572.951867816092" y="1175.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.usuario</node>
+    <node x="581.6530172413794" y="1153.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.servico</node>
+    <node x="1087.014367816092" y="298.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente</node>
+    <node x="1132.451867816092" y="1153.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.ajusteest</node>
+    <node x="714.9310344827587" y="0.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.estado</node>
+    <node x="184.0" y="364.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.maquinario</node>
+    <node x="0.0" y="1611.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.pessoa</node>
+    <node x="1770.4375" y="1423.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.baixacontaspagar</node>
+    <node x="537.9030172413794" y="817.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.tiposervico</node>
+    <node x="800.3268678160921" y="773.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.vendas</node>
+    <node x="375.76364942528744" y="1098.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contasreceber</node>
+    <node x="714.9310344827587" y="149.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cidade</node>
+    <node x="1511.6386494252874" y="773.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.compra</node>
+    <node x="1777.4375" y="1109.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contaspagar</node>
+    <node x="228.65229885057465" y="1423.0">586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensagendamento</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contasreceber" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.vendas">
+      <point x="69.0" y="-137.5" />
+      <point x="536.7636494252874" y="1068.0" />
+      <point x="823.4518678160921" y="1068.0" />
+      <point x="-69.375" y="93.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensservico" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.servico">
+      <point x="-46.5" y="-71.5" />
+      <point x="798.8893678160921" y="1403.0" />
+      <point x="696.4030172413794" y="1403.0" />
+      <point x="38.25" y="82.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.usuario" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.funcionario">
+      <point x="0.0" y="-60.5" />
+      <point x="1645.451867816092" y="1068.0" />
+      <point x="1406.3053160919542" y="1068.0" />
+      <point x="0.0" y="181.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.ajusteest" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.pecas">
+      <point x="0.0" y="-82.5" />
+      <point x="1216.951867816092" y="1078.0" />
+      <point x="1207.6041666666667" y="1078.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensservico" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.vendas">
+      <point x="46.5" y="-71.5" />
+      <point x="891.8893678160921" y="1403.0" />
+      <point x="915.9518678160921" y="1403.0" />
+      <point x="23.125" y="93.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cidade">
+      <point x="0.0" y="-148.5" />
+      <point x="1169.014367816092" y="273.0" />
+      <point x="814.6810344827587" y="273.0" />
+      <point x="33.25" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.funcionario" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente">
+      <point x="0.0" y="-181.5" />
+      <point x="1406.3053160919542" y="665.0" />
+      <point x="1182.6810344827586" y="665.0" />
+      <point x="13.666666666666629" y="148.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.agendamento" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente">
+      <point x="72.75" y="-126.5" />
+      <point x="321.0143678160921" y="645.0" />
+      <point x="1100.6810344827586" y="645.0" />
+      <point x="-68.33333333333337" y="148.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.agendamento" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.locais">
+      <point x="-72.75" y="-126.5" />
+      <point x="175.5143678160921" y="665.0" />
+      <point x="82.0" y="665.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itenscompra" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.pecas">
+      <point x="-46.5" y="-71.5" />
+      <point x="1413.451867816092" y="1078.0" />
+      <point x="1260.9375" y="1078.0" />
+      <point x="53.33333333333337" y="60.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.locais" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cidade">
+      <point x="0.0" y="-71.5" />
+      <point x="82.0" y="273.0" />
+      <point x="748.1810344827587" y="273.0" />
+      <point x="-33.25" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contasreceber" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente">
+      <point x="23.0" y="-137.5" />
+      <point x="490.76364942528744" y="1078.0" />
+      <point x="475.1530172413794" y="1078.0" />
+      <point x="475.1530172413794" y="655.0" />
+      <point x="1128.014367816092" y="655.0" />
+      <point x="-41.0" y="148.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensvenda" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.vendas">
+      <point x="-46.5" y="-71.5" />
+      <point x="972.9518678160921" y="1078.0" />
+      <point x="962.2018678160921" y="1078.0" />
+      <point x="69.375" y="93.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contaspagar" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.compra">
+      <point x="-61.33333333333334" y="-126.5" />
+      <point x="1808.1041666666665" y="1078.0" />
+      <point x="1664.6386494252874" y="1078.0" />
+      <point x="51.0" y="93.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contasreceber" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.agendamento">
+      <point x="-69.0" y="-137.5" />
+      <point x="398.76364942528744" y="1078.0" />
+      <point x="296.7643678160921" y="1078.0" />
+      <point x="48.5" y="126.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.compra" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente">
+      <point x="0.0" y="-93.5" />
+      <point x="1613.6386494252874" y="655.0" />
+      <point x="1210.014367816092" y="655.0" />
+      <point x="41.0" y="148.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.baixacontasreceber" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contasreceber">
+      <point x="0.0" y="-71.5" />
+      <point x="577.5272988505747" y="1393.0" />
+      <point x="467.76364942528744" y="1393.0" />
+      <point x="0.0" y="137.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.servico" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.tiposervico">
+      <point x="-38.25" y="-82.5" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.servico" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.vendas">
+      <point x="38.25" y="-82.5" />
+      <point x="696.4030172413794" y="1078.0" />
+      <point x="869.7018678160921" y="1078.0" />
+      <point x="-23.125" y="93.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cidade" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.estado">
+      <point x="0.0" y="-49.5" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contasreceber" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.planopagamento">
+      <point x="-23.0" y="-137.5" />
+      <point x="444.76364942528744" y="1078.0" />
+      <point x="462.2636494252874" y="1078.0" />
+      <point x="462.2636494252874" y="635.0" />
+      <point x="665.3268678160921" y="635.0" />
+      <point x="-20.5" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.agendamento" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.maquinario">
+      <point x="-24.25" y="-126.5" />
+      <point x="224.0143678160921" y="665.0" />
+      <point x="266.0" y="665.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.vendas" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente">
+      <point x="46.25" y="-93.5" />
+      <point x="939.0768678160921" y="665.0" />
+      <point x="1155.3477011494253" y="665.0" />
+      <point x="-13.666666666666629" y="148.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensagendamento" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.servico">
+      <point x="46.5" y="-71.5" />
+      <point x="368.15229885057465" y="1403.0" />
+      <point x="619.9030172413794" y="1403.0" />
+      <point x="-38.25" y="82.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.baixacontaspagar" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contaspagar">
+      <point x="0.0" y="-71.5" />
+      <point x="0.0" y="126.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensvenda" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.pecas">
+      <point x="46.5" y="-71.5" />
+      <point x="1065.951867816092" y="1078.0" />
+      <point x="1154.2708333333335" y="1078.0" />
+      <point x="-53.33333333333337" y="60.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.agendamento" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.planopagamento">
+      <point x="24.25" y="-126.5" />
+      <point x="272.5143678160921" y="625.0" />
+      <point x="624.3268678160921" y="625.0" />
+      <point x="-61.5" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contaspagar" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.cliente">
+      <point x="61.33333333333337" y="-126.5" />
+      <point x="1930.7708333333335" y="1078.0" />
+      <point x="1907.055316091954" y="1078.0" />
+      <point x="1907.055316091954" y="615.0" />
+      <point x="1237.3477011494253" y="615.0" />
+      <point x="68.33333333333326" y="148.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itenscompra" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.compra">
+      <point x="46.5" y="-71.5" />
+      <point x="1506.451867816092" y="1078.0" />
+      <point x="1562.6386494252874" y="1078.0" />
+      <point x="-51.0" y="93.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.contaspagar" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.planopagamento">
+      <point x="0.0" y="-126.5" />
+      <point x="1869.4375" y="1078.0" />
+      <point x="1894.6041666666667" y="1078.0" />
+      <point x="1894.6041666666667" y="625.0" />
+      <point x="747.3268678160921" y="625.0" />
+      <point x="61.5" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.vendas" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.planopagamento">
+      <point x="-46.25" y="-93.5" />
+      <point x="846.5768678160921" y="635.0" />
+      <point x="706.3268678160921" y="635.0" />
+      <point x="20.5" y="49.5" />
+    </edge>
+    <edge source="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensagendamento" target="586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.agendamento">
+      <point x="-46.5" y="-71.5" />
+      <point x="275.15229885057465" y="1403.0" />
+      <point x="199.7643678160921" y="1403.0" />
+      <point x="-48.5" y="126.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3119565217391304" x="984.5" y="900.0000000000001" />
+  <SelectedNodes>
+    <node>586135d8-5c52-43a3-bba5-3a7409756137.TABLE:projetotcc.public.itensagendamento</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

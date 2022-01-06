@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+
+    <ui:define name="body">
+
+        <h:form>
+            <p:panel>
+                <p:panelGrid columns="2"
+                             columnClasses="ui-grid-col-2,ui-grid-col-10"
+                             layout="grid"
+                             styleClass="ui-panelgrid-blank ui-fluid"
+                             style="border:0px none; background-color:transparent;">
+
+                    <p:row styleClass="my-heading-row" style="font-weight: bold">
+                        Dados Conta
+                    </p:row>
+
+                    <p:outputLabel value="Número Conta" for="nc"/>
+                    <p:inputMask id="nc" value="#{contaControle.conta.conta}"
+                                 requiredMessage="O Número da Conta é obrigatório!" size="30"
+                                 required="true" mask="99999-9">
+                    </p:inputMask>
+
+
+                    <p:outputLabel value="Cliente"/>
+                    <p:autoComplete value="#{contaControle.conta.cliente}"
+                                    size="60" id="cliente" required="true"
+                                    requiredMessage="O cliente é obrigatório"
+                                    emptyMessage="Nenhuma cliente encontrado"
+                                    effect="blind"
+                                    widgetVar="cliWid"
+                                    onclick="PF('cliWid').search('')"
+                                    forceSelection="true"
+                                    completeMethod="#{contaControle.getListaClientesFiltrando}"
+                                    var="cli"
+                                    itemValue="#{cli}"
+                                    itemLabel="#{cli.nome} - #{cli.cpfcpnj}"
+                                    converter="#{contaControle.clienteConverter}">
+                    </p:autoComplete>
+
+                    <p:row>
+                        <p:column styleClass="ui-grid-col-6">
+
+                            <p:commandButton value="Voltar" ajax="false" styleClass="ui-button-raised" immediate="true"
+                                             action="list.xhtml"/>
+                        </p:column>
+                        <p:column styleClass="ui-grid-col-6">
+                            <p:commandButton value="Salvar" ajax="false" styleClass="ui-button-raised ui-button-success"
+                                             actionListener="#{contaControle.salvar()}"/>
+                        </p:column>
+                    </p:row>
+                </p:panelGrid>
+            </p:panel>
+        </h:form>
+
+    </ui:define>
+</ui:composition>
+
+</html>
+

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+
+    <ui:define name="body">
+
+
+        <h:form>
+            <p:panel>
+                <p:panelGrid columns="2"
+                             columnClasses="ui-grid-col-3,ui-grid-col-9"
+                             layout="grid"
+                             styleClass="ui-panelgrid-blank ui-fluid"
+                             style="border:0px none; background-color:transparent;">
+
+                    <p:row styleClass="my-heading-row" style="font-weight: bold">
+                        Dados do cadastro:
+                    </p:row>
+
+                    <p:outputLabel value="Data Transação"/>
+                    <h:outputText value="#{transacoesControle.transacoes.dataTransacao}" id="dataT"
+                                  styleClass="hardblue"
+                                  size="40">
+                        <f:convertDateTime pattern="dd/MM/yyyy" locale="pt_BR"/>
+                    </h:outputText>
+
+                    <p:outputLabel value="Nº Conta"/>
+                    <h:outputText value="#{transacoesControle.transacoes.conta.conta}" id="conta"
+                                  styleClass="hardblue"
+                                  size="40"/>
+
+                    <p:outputLabel value="Cliente"/>
+                    <h:outputText value="#{transacoesControle.transacoes.conta.cliente.nome}" id="cliente"
+                                  styleClass="hardblue"
+                                  size="40"/>
+
+                    <p:outputLabel value="Valor da transação"/>
+                    <h:outputText value="#{transacoesControle.transacoes.conta.valorConta}" id="valorConta"
+                                  styleClass="hardblue"
+                                  size="40">
+                        <f:convertNumber type="currency"/>
+                    </h:outputText>
+                    <p:row>
+                        <p:column styleClass="ui-grid-col-12">
+
+                            <p:commandButton value="Voltar" ajax="false" styleClass="ui-button-raised" immediate="true"
+                                             action="list.xhtml"/>
+                        </p:column>
+
+                    </p:row>
+                </p:panelGrid>
+            </p:panel>
+        </h:form>
+
+    </ui:define>
+</ui:composition>
+</html>
+

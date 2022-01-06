@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+
+    <ui:define name="body">
+
+        <div class="card">
+            <h:form id="form">
+
+                <p:panelGrid columns="2"
+                             columnClasses="ui-grid-col-8,ui-grid-col-4"
+                             layout="grid"
+                             styleClass="ui-panelgrid-blank ui-fluid"
+                             style="border:0px none; background-color:transparent;">
+                    <h3>Lista de Contas</h3>
+                    <p:commandButton value="Novo" ajax="false"
+                                     styleClass="ui-button-raised"
+                                     action="index.xhtml"
+                                     actionListener="#{contaControle.novo()}"/>
+                </p:panelGrid>
+
+                <p:dataTable var="conta" value="#{contaControle.listaConta}" rows="10" reflow="true"
+                             paginator="true"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                             currentPageReportTemplate="{startRecord}-{endRecord} de {totalRecords} resultados"
+                             paginatorPosition="bottom"
+                             rowsPerPageTemplate="5,10,{ShowAll|'All'}"
+                             emptyMessage="Nenhuma Conta Encontrada">
+
+                    <p:column headerText="ID" width="10%">
+                        <h:outputText value="#{conta.id}"/>
+                    </p:column>
+                    <p:column headerText="Cliente Associado" style="text-align: center"
+                              filterBy="#{conta.cliente.nome}" filterMatchMode="contains" filterStyle="width: 50%">
+                        <h:outputText value="#{conta.cliente.nome}"/>
+                    </p:column>
+                    <p:column headerText="Conta" style="text-align: center">
+                        <h:outputText value="#{conta.conta}"/>
+                    </p:column>
+                    <p:column headerText="Valor em conta" style="text-align: center">
+                        <p:outputLabel value="#{conta.valorConta}">
+                            <f:convertNumber type="currency"/>
+                        </p:outputLabel>
+                    </p:column>
+                    <p:column headerText="Ações" style="text-align: right;">
+                        <p:commandButton icon="pi pi-info-circle"
+                                         styleClass="rounded-button ui-button-info-outline ui-button-flat"
+                                         actionListener="#{contaControle.editar(conta)}" action="view.xhtml"
+                                         ajax="false"/>
+                        <p:commandButton icon="pi pi-pencil"
+                                         styleClass="rounded-button ui-button-warning ui-button-flat"
+                                         action="index.xhtml"
+                                         actionListener="#{contaControle.editar(conta)}"
+                                         ajax="false"/>
+                        <p:commandButton icon="pi pi-times" styleClass="rounded-button ui-button-danger ui-button-flat"
+                                         actionListener="#{contaControle.excluir(conta)}"
+                                         ajax="false"/>
+                    </p:column>
+                </p:dataTable>
+
+
+            </h:form>
+        </div>
+
+
+    </ui:define>
+</ui:composition>
+</html>
+

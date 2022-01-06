@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+
+    <ui:define name="body">
+        <br/>
+        <h:form id="ftransacoes">
+            <p:panel header="Transações">
+                <p:panelGrid columns="2"
+                             columnClasses="ui-grid-col-2,ui-grid-col-3,ui-grid-col-2,ui-grid-col-4"
+                             layout="grid"
+                             styleClass="ui-panelgrid-blank ui-fluid"
+                             style="border:0px none; background-color:transparent;">
+
+                    <p:row styleClass="my-heading-row">
+                    </p:row>
+
+                    <p:outputLabel value="Data" for="data"/>
+                    <p:calendar value="#{transacoesControle.transacoes.dataTransacao}" id="data"
+                                pattern="dd/MM/yyyy" locale="pt_BR" disabled="true"
+                                required="true" requiredMessage="A data é obrigatória!"/>
+
+                    <p:outputLabel value="Selecione o tipo de transação:" for="tipo"/>
+                    <p:selectOneRadio id="tipo" value="#{transacoesControle.transacoes.tipo}">
+                        <f:selectItem itemLabel="Depósito" itemValue="D"/>
+                        <f:selectItem itemLabel="Transferência" itemValue="S"/>
+                        <p:ajax update="@this contd contdd" event="change"/>
+                    </p:selectOneRadio>
+
+                    <p:outputLabel value="Conta Origem"/>
+                    <p:autoComplete value="#{transacoesControle.transacoes.conta}"
+                                    size="60" id="conta" required="true"
+                                    requiredMessage="A conta é obrigatória"
+                                    emptyMessage="Nenhum conta encontrada"
+                                    effect="blind"
+                                    widgetVar="contaWid"
+                                    onclick="PF('contaWid').search('')"
+                                    forceSelection="true"
+                                    completeMethod="#{transacoesControle.getListacontasFiltrando}"
+                                    var="cont"
+                                    itemValue="#{cont}"
+                                    itemLabel="#{cont.conta} - #{cont.cliente.nome}"
+                                    converter="#{transacoesControle.contaConverter}">
+                        <p:ajax event="itemSelect"
+                                update="tipo ftransacoes"/>
+                    </p:autoComplete>
+
+
+                    <h:panelGroup id="contd">
+                        <p:outputLabel value="Conta Destino" rendered="#{transacoesControle.transacoes.tipo == 'S'}"/>
+                    </h:panelGroup>
+                    <h:panelGroup id="contdd">
+                        <p:autoComplete value="#{transacoesControle.transacoes.contaD}"
+                                        rendered="#{transacoesControle.transacoes.tipo == 'S'}"
+                                        size="60" required="true"
+                                        requiredMessage="A conta é obrigatória"
+                                        emptyMessage="Nenhum conta encontrada"
+                                        effect="blind"
+                                        widgetVar="contadWid"
+                                        onclick="PF('contadWid').search('')"
+                                        forceSelection="true"
+                                        completeMethod="#{transacoesControle.getListacontasFiltrando}"
+                                        var="contd"
+                                        itemValue="#{contd}"
+                                        itemLabel="#{contd.conta} - #{contd.cliente.nome}"
+                                        converter="#{transacoesControle.contaConverter}">
+                        </p:autoComplete>
+                    </h:panelGroup>
+
+                    <p:outputLabel value="Quantidade" for="qtd"/>
+                    <p:inputNumber value="#{transacoesControle.transacoes.qtdTotal}" id="qtd"
+                                   size="10"
+                                   decimalPlaces="2" decimalSeparator=","
+                                   thousandSeparator="." symbol="R$">
+                        <f:validateDoubleRange minimum="0.01"/>
+                    </p:inputNumber>
+
+                    <p:row>
+                        <p:column styleClass="ui-grid-col-6">
+
+                            <p:commandButton value="Histórico de transações" ajax="false" styleClass="ui-button-raised"
+                                             immediate="true"
+                                             action="list.xhtml"/>
+                        </p:column>
+                        <p:column styleClass="ui-grid-col-6">
+                            <p:commandButton value="Salvar" ajax="false" styleClass="ui-button-raised ui-button-success"
+                                             actionListener="#{transacoesControle.salvar()}"/>
+                        </p:column>
+                    </p:row>
+                </p:panelGrid>
+            </p:panel>
+        </h:form>
+
+    </ui:define>
+</ui:composition>
+
+</html>
