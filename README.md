@@ -65,7 +65,7 @@ contas, sendo necessário associar um cliente a uma conta, para a realização d
 
 - [Java](https://www.java.com/pt-BR/)
 - [PrimeFaces](https://www.primefaces.org/showcase/index.xhtml/)
-- [Postgres](https://www.postgresql.org/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## ❓ Como utilizar?
 
