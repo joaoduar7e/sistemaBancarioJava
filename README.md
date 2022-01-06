@@ -71,8 +71,6 @@ contas, sendo necessário associar um cliente a uma conta, para a realização d
 
 <p>
 
-- Após 
-
 - Utilizar como IDE IntelliJ.
 
 - Utilizar Java 8.
